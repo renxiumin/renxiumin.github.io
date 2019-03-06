@@ -53,6 +53,8 @@
         <button type="button" @click="jumptest(1)" class="btn btn-link btn-default">写在深思熟虑之后的情书</button>
         ||
         <button type="button" @click="jumptest(2)" class="btn btn-link btn-default">是夜,19,圣瓦伦丁</button>
+        ||
+        <button type="button" @click="jumptest(3)" class="btn btn-link btn-default">哇哦，2.0版本大升级</button>
 
 
         <div  v-if="jump == 1"  class="col-md-12 column">
@@ -110,6 +112,20 @@
                 <br/><br/>
                 MY LIFE。
 
+            </p>
+        </div>
+
+        <div  v-else-if="jump == 3"  class="col-md-12 column">
+            <h2>
+                哇哦，2.0版本大升级
+            </h2>
+            <p>
+                1.修改了写在最后的格式模板。<br><br>
+                2.添加了故事墙，考虑到便于下载，压缩了图片大小。<br><br>
+                3.购置了新的域名：www.renxiumin.com <br><br>
+                4.暂时没得4。<br><br>
+                5.加油啊，努力今年争取直接美滋滋。<br><br>
+                6.下次电话。和我商量商量看看我毕业准备怎么搞呀，又迷惑了。<br><br>
             </p>
         </div>
 
