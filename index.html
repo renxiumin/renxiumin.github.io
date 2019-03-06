@@ -7,6 +7,10 @@
 		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/sweetalert2.min.css">
+        <script src="js/sweetalert2.min.js"></script>
+        <script src="js/es6-promise.auto.js"></script>
 	</head>
 	<body>
 
@@ -121,7 +125,13 @@
 						this.sec = sec
 						this.widthlength = ((1 - (this.sec / 60)) * 100).toString();
 					}
-				}
+				},created:function(){
+                    Swal.fire(
+                        'Good job!',
+                        'You clicked the button!',
+                        'success'
+                    )
+                }
 			})
 			vm.time();
 			vm.A();
