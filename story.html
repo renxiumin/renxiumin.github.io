@@ -55,6 +55,8 @@
         <button type="button" @click="jumptest(2)" class="btn btn-link btn-default">是夜,19,圣瓦伦丁</button>
         ||
         <button type="button" @click="jumptest(3)" class="btn btn-link btn-default">哇哦，2.0版本大升级</button>
+       ||
+        <button type="button" @click="jumptest(4)" class="btn btn-link btn-default">800字检查</button>
 
 
         <div  v-if="jump == 1"  class="col-md-12 column">
@@ -126,6 +128,16 @@
                 4.暂时没得4。<br><br>
                 5.加油啊，努力今年争取直接美滋滋。<br><br>
                 6.下次电话。和我商量商量看看我毕业准备怎么搞呀，又迷惑了。<br><br>
+            </p>
+        </div>
+
+
+        <div  v-else-if="jump == 4"  class="col-md-12 column">
+            <h2>
+                800字检查
+            </h2>
+            <p>
+                待完成。。。
             </p>
         </div>
 
