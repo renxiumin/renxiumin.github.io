@@ -14,39 +14,55 @@
 </head>
 <body>
 
-<div class="container" id="vueapp">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <img style="margin: auto;width: 100%;" src="img/mother.jpg">
-        </div>
-        <div class="col-md-12 column">
-            <div class="row clearfix">
-                <div class="col-md-12 column">
-                        <button type="button" style="float: left;width: 40%;" class="btn btn-lg active  btn-info">上一页</button>
-                        <button type="button" style="float: right;width: 40%;" class="btn btn-lg active  btn-info">下一页</button>
-
-                </div>
-            </div>
+<div class="container" id="vueapp" style="height: 100%">
+    <div class="row clearfix" style="float: bottom;margin-top: 30px;">
+        <div class="col-md-12 column" >
+            <button type="button" style="float: left;width: 40%;" @click="prev" class="btn btn-lg active  btn-info">上一页</button>
+            <button type="button" style="float: right;width: 40%;" @click="next" class="btn btn-lg active  btn-info">下一页</button>
         </div>
     </div>
-</div>
+    <div class="row clearfix" style="margin-top: 50px;">
+        <div class="col-md-12 column" >
+            <div v-if="vlue==0">000000000</div>
+            <div v-else-if="vlue==1">111111111</div>
+            <div v-else-if="vlue==2">222222222</div>
+            <div  v-else-if="vlue==3">
+                <img style="width: 100%" src="img/mother.jpg"></div>
+            <div  v-else-if="vlue==4">444444444</div>
+        </div>
+    </div>
 
-<script>
-    var vm = new Vue({
-        el: '#vueapp',
-        data: {
-            message: '写给正在努力的任小姐',
 
-        },
-        methods: {}, created: function () {
-            Swal.fire(
-                '祝沈博他妈',
-                '母亲节快乐',
-                'success'
-            )
-        }
-    })
-</script>
+
+    <script>
+        var vm = new Vue({
+            el: '#vueapp',
+            data: {
+                message: '写给正在努力的任小姐',
+                vlue:0,
+            },
+            methods: {
+                prev(){
+                    if(this.vlue != 0){
+                    this.vlue--;
+                }
+                },
+                next(){
+                    if(this.vlue != 4){
+                        this.vlue++;
+                    }
+                }
+
+            },
+            created: function () {
+                Swal.fire(
+                    '祝沈博他妈',
+                    '母亲节快乐',
+                    'success'
+                )
+            }
+        })
+    </script>
 
 
 </body>
