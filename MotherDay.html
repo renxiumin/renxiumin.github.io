@@ -18,17 +18,53 @@
     <div class="row clearfix" style="float: bottom;margin-top: 30px;">
         <div class="col-md-12 column" >
             <button type="button" style="float: left;width: 40%;" @click="prev" class="btn btn-lg active  btn-info">上一页</button>
+            <div style="width: 20%;float: left;text-align: center;">第{{vlue}}页</div>
             <button type="button" style="float: right;width: 40%;" @click="next" class="btn btn-lg active  btn-info">下一页</button>
         </div>
     </div>
+
     <div class="row clearfix" style="margin-top: 50px;">
         <div class="col-md-12 column" >
-            <div v-if="vlue==0">000000000</div>
-            <div v-else-if="vlue==1">111111111</div>
-            <div v-else-if="vlue==2">222222222</div>
+            <div v-if="vlue==0" style="text-align: center">
+                <h1>母亲节快乐！！！！</h1>
+                <img style="width: 100%" src="img/maindex.jpg">
+            </div>
+            <div v-else-if="vlue==1">
+                <h2>
+                    22年了也，感觉时间过得还是挺快的。
+                </h2>
+                <p>
+                   感觉都忘了是怎么从叛逆期走过来的。总感觉以前心态好像和现在差的有点多，小时候，记忆里，我应该是个挺不听话的孩子吧。偷过钱，买过那么贵的三国杀，还吵过架。但是好像现在想想却又记不起太多了。能记住的反而都是那些美好的东西，我突兀的想起来初中写的那句话，母亲就像一个匠人，用尽一生的时间，细细打磨，她这一生唯一一件也是最好的一件艺术品，我们。<br/><br/><br/>
+                    也不知道，成长过程，我又没有给你们太多难受的东西。但我真的感觉相比与其他家庭，咱们家真的是太棒了，很感谢你们多年的付出。如今虽说我心里年龄没长大吧，但总归也走入社会了。你们可以不用太操心了，一切都好。一切都好。
+                </p>
+            </div>
+            <div v-else-if="vlue==2">
+                <h2>
+                   关于家庭所教会我的
+                </h2>
+                <p>
+                    现在应该具备完整独立的人格了吧。大学这四年，给了个人更多独处的时间。也好让我们看清我们自己的模样，我于是发现我真的就是家庭里面的性格的一种新的组合。<br/><br/><br/>
+                    隐忍，乐于帮助，善良，孝敬，沉默，以及因为你们过于奉献，导致我轻微的依赖别人。可能就像是我们看的电视剧，一个家族有一个家族的组训，原来其实现在虽然不说，但也还是有。我也说不上现在这样是好是会，但总归结果我成了这样，我还挺喜欢的。
+                </p>
+            </div>
             <div  v-else-if="vlue==3">
-                <img style="width: 100%" src="img/mother.jpg"></div>
-            <div  v-else-if="vlue==4">444444444</div>
+                <h2>
+                   随手找了张照片
+                </h2>
+                <img style="width: 100%" src="img/mother.png">
+            </div>
+            <div  v-else-if="vlue==4">
+                <h2>
+                    关于未来
+                </h2>
+                <p>
+                    我应该是那种不太求上进的人。所以估计也不太会有出息。现在就想月薪上万。哈哈。<br/><br/><br/>
+                    未来，祝愿一切安好，尤其是姥姥的身体，千万要健康，你要是有钱没地花了，也别给我，给姥姥买点保健品啥的。我这边真的不用操心了。也挺感谢你们给我做的榜样。不然我估计现在已经不想上班了。真的，我们其实感觉都还没长大，能和你们商量着来，感觉对前路也充满了信心。<br/><br/><br/>
+                    未来应该会好起来的。我发誓。生活嘛，总会好起来的。
+                    母亲节快乐。
+                </p>
+
+            </div>
         </div>
     </div>
 
@@ -38,7 +74,6 @@
         var vm = new Vue({
             el: '#vueapp',
             data: {
-                message: '写给正在努力的任小姐',
                 vlue:0,
             },
             methods: {
@@ -53,13 +88,6 @@
                     }
                 }
 
-            },
-            created: function () {
-                Swal.fire(
-                    '祝沈博他妈',
-                    '母亲节快乐',
-                    'success'
-                )
             }
         })
     </script>
